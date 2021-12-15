@@ -9,12 +9,12 @@
   # echo ${strarr[@]}
   repoName=${strarr[4]}
   echo "$repoName"
-  git clone git@github.com:opentable/$repoName.git -q
+  git clone git@github.com:$2/$repoName.git -q
   cd $repoName
   mvn dependency:tree | grep -i log4j
   cd ../
 #}
  
 #while IFS= read -r line; do
-#  clone_and_check $line
+#  clone_and_check $line $2
 #done < $1
